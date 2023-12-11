@@ -79,17 +79,20 @@
   <link rel="icon" href="https://i.pinimg.com/474x/a4/9c/6b/a49c6b392b3172df6edb3ae6db955856.jpg" type="image/x-icon">
 
 
-
- <!-- Metatags para tornar o site instalável (PWA) -->
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#ff66b2">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Moranguinho">
-
-
 </head>
 <body>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registrado com sucesso:', registration);
+      })
+      .catch((error) => {
+        console.error('Falha ao registrar o Service Worker:', error);
+      });
+  }
+</script>
 
 <div class="container-box">
   <h1 class="text-center mb-4">Calculadora da Moranguinho</h1>
