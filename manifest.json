@@ -8,7 +8,7 @@
   "theme_color": "#ff66b2",
   "icons": [
     {
-      "src": "/path/to/icon.png", // Substitua pelo caminho do seu ícone
+      "src": "https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg", // Substitua pelo caminho do seu ícone
       "sizes": "192x192",
       "type": "image/png"
     }
