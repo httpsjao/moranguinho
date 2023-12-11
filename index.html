@@ -95,23 +95,11 @@
 <meta name="apple-touch-startup-image" content="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg">
 
   
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then((registration) => {
-        console.log('Service Worker registrado com sucesso:', registration);
-      })
-      .catch((error) => {
-        console.error('Falha ao registrar o Service Worker:', error);
-      });
-  }
-</script>
-
 <div class="container-box">
   <h1 class="text-center mb-4">Calculadora da Moranguinho</h1>
 
   <!-- Aviso geral -->
-  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da padronização, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
+  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da padronização amiguinha, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
 
   <!-- Formulário para IBC -->
   <div>
@@ -209,7 +197,7 @@
     
     // Verificar se o usuário foi aprovado ou reprovado
     if (notaFinal >= 6) {
-      resultadoElement.innerHTML += '<span style="color: green;">Aprovado!</span>';
+      resultadoElement.innerHTML += '<span style="color: green;">Aprovado! Parabéns amiguinha</span>';
     } else {
       resultadoElement.innerHTML += '<span style="color: red;">Reprovado!</span>';
     }
