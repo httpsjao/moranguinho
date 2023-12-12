@@ -8,67 +8,75 @@
   <!-- Adicione o link para os estilos do Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
+    <style>
     body {
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
     }
 
     .container-box {
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.5);
+      background-color: #f0f0f0;
       width: 100%;
       max-width: 400px;
     }
 
     h1 {
-      font-family: 'Pacifico', cursive; /* Adicionando a fonte Pacifico */
-      color: #ff66b2; /* Rosa mais escuro para o título */
+      font-family: 'Pacifico', cursive;
+      color: #ff66b2;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     h3 {
-      color: #ff66b2; /* Rosa mais escuro para os títulos das seções */
+      color: #ff66b2;
+      margin-top: 20px;
     }
 
     p.aviso {
-      color: #ff66b2; /* Rosa mais escuro para o aviso */
+      color: #ff66b2;
+      margin-top: 10px;
     }
 
     button.btn-primary {
-      background-color: #ff66b2; /* Rosa para o botão */
+      background-color: #ff66b2;
       border-color: #ff66b2;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
     }
 
-    /* Estilos específicos para dispositivos móveis */
-    @media (max-width: 576px) {
-      body {
-        background-image: url('https://i.pinimg.com/originals/bb/47/38/bb4738c65d43b1903997bc90f171d65f.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center; /* Centralizar a imagem */
-      }
-
-      .container-box {
-        background-color: rgba(255, 255, 255, 0.8);
-      }
+    button.btn-primary:hover {
+      box-shadow: none;
+      transform: translate(2px, 2px);
     }
 
-    /* Estilos específicos para dispositivos desktop */
-    @media (min-width: 577px) {
-      body {
-        background-image: url('https://img.elo7.com.br/product/zoom/23FDA2D/adesivo-de-parede-moranguinho-ii-moranguinho.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center; /* Centralizar a imagem */
-      }
+    .resultado {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-      .container-box {
-        background-color: rgba(255, 255, 255, 0.8);
-      }
+    .resultado p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .resultado .aprovado {
+      color: #4caf50;
+    }
+
+    .resultado .reprovado {
+      color: #f44336;
     }
   </style>
 
@@ -82,14 +90,15 @@
 </head>
 <body>
   
+
 <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#ff66b2">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Calculadora Moranguinho">
-  <meta name="mobile-web-app-capable" content="yes">
-
-
+<meta name="theme-color" content="#ff66b2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Moranguinho">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg">
 <meta name="apple-touch-startup-image" content="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg">
 
@@ -98,7 +107,7 @@
   <h1 class="text-center mb-4">Calculadora da Moranguinho</h1>
 
   <!-- Aviso geral -->
-  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da padronização amiguinha, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
+  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da divisão, viu amiguinha, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
 
   <!-- Formulário para IBC -->
   <div>
@@ -112,7 +121,6 @@
   </div>
 
   <!-- Aviso para Morfologia -->
-  <p class="aviso">Aviso: Este app utiliza as notas da avaliação/componente antes da padronização.</p>
   <!-- Formulário para Morfologia -->
   <div>
     <h3>Morfologia</h3>
@@ -128,8 +136,7 @@
     </form>
   </div>
 
-  <!-- Aviso para Sessão Tutorial -->
-  <p class="aviso">Aviso: Este app utiliza as notas da avaliação/componente antes da padronização.</p>
+
   <!-- Formulário para Sessão Tutorial -->
   <div>
     <h3>Sessão Tutorial</h3>
