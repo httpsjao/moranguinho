@@ -98,7 +98,7 @@
   <h1 class="text-center mb-4">Calculadora da Moranguinho</h1>
 
   <!-- Aviso geral -->
-  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da padronização amiguinha, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
+  <p class="aviso">Aviso: Esse app usa as notas da avaliação/componente antes da divisão amiguinha, ou seja, se eu acertei 24/30 na cognitiva 1, minha nota é 8.</p>
 
   <!-- Formulário para IBC -->
   <div>
@@ -112,7 +112,7 @@
   </div>
 
   <!-- Aviso para Morfologia -->
-  <p class="aviso">Aviso: Este app utiliza as notas da avaliação/componente antes da padronização.</p>
+
   <!-- Formulário para Morfologia -->
   <div>
     <h3>Morfologia</h3>
@@ -129,7 +129,7 @@
   </div>
 
   <!-- Aviso para Sessão Tutorial -->
-  <p class="aviso">Aviso: Este app utiliza as notas da avaliação/componente antes da padronização.</p>
+ 
   <!-- Formulário para Sessão Tutorial -->
   <div>
     <h3>Sessão Tutorial</h3>
@@ -197,6 +197,7 @@
     // Verificar se o usuário foi aprovado ou reprovado
     if (notaFinal >= 6) {
       resultadoElement.innerHTML += '<span style="color: green;">Aprovado! Parabéns amiguinha</span>';
+      alert("Parabéns amiguinha, você passou.");
     } else {
       resultadoElement.innerHTML += '<span style="color: red;">Reprovado!</span>';
     }
