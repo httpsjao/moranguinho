@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="luxo.css">
+  <title>Calculadora da Moranguinho</title>
+  
+
+  <!-- Adicione o link para os estilos do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container-box {
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive; /* Adicionando a fonte Pacifico */
+      color: #ff66b2; /* Rosa mais escuro para o título */
+    }
+
+    h3 {
+      color: #fb778e; /* Rosa mais escuro para os títulos das seções */
+    }
+
+    p.aviso {
+      color: #ff66b2; /* Rosa mais escuro para o aviso */
+    }
+
+    button.btn-primary {
+      background-color: #ffb6c1; /* Rosa para o botão */
+      border-color: #ffb6c1;
+    }
+
+    /* Estilos específicos para dispositivos móveis */
+    @media (max-width: 576px) {
+      body {
+        background-image: url('https://i.pinimg.com/736x/14/d4/8e/14d48e9d9489a9d75b302f2d4cfbc5aa.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; /* Centralizar a imagem */
+      }
+
+      .container-box {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    /* Estilos específicos para dispositivos desktop */
+    @media (min-width: 577px) {
+      body {
+        background-image: url('https://img.elo7.com.br/product/zoom/23FDA2D/adesivo-de-parede-moranguinho-ii-moranguinho.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; /* Centralizar a imagem */
+      }
+
+      .container-box {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  </style>
+
+  <!-- Adicionando a fonte Pacifico -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+
+  <!-- Adicionando o Favicon -->
+  <link rel="icon" href="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg" type="image/x-icon">
+
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/index/includes/modal.js"></script>
+
+  <div class="modal fade" id="novidadesModal" tabindex="-1" aria-labelledby="novidadesModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-body p-5">
+          <h2 class="fw-bold mb-0 text-center">Novidades da Moranguinho</h2>
+  
+          <ul class="d-grid gap-4 my-5 list-unstyled small">
+            <li class="d-flex gap-4">
+              <img src="/index/svg/cookie.svg" alt="Ícone de cookie" class="bi text-body-secondary flex-shrink-0" width="48" height="48">
+              <div>
+                <h5 class="mb-0">Calculadora mais esperta!</h5>
+                Agora a calculadora está ainda mais esperta e consegue se lembrar das notas que você digitou em sua última visita, não é demais?
+              </div>
+            </li>
+            <li class="d-flex gap-4">
+              <img src="/index/svg/lixo.svg" alt="Ícone de cookie" class="bi text-body-secondary flex-shrink-0" width="48" height="48">
+              <div>
+                <h5 class="mb-0">Botões para limpar!</h5>
+                Adicionamos botões para limpar os campos de notas com apenas um clique.
+              </div>
+            </li>
+            <li class="d-flex gap-4">
+              <img src="/index/svg/segurança.svg" alt="Ícone de cookie" class="bi text-body-secondary flex-shrink-0" width="48" height="48">
+              <div>
+                <h5 class="mb-0">Sua segurança está mantida!</h5>
+                Todas as suas informações são armazenadas e processadas apenas em seu dispositivo, não há o envio de seus dados para nenhum servidor externo, porque eu consigo guardá-las em forma de biscoitos (cookies) no seu aparelho.
+              </div>
+            </li>
+          </ul>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primaryy my-2 w-100" data-bs-dismiss="modal" onclick="entendiNovidades()">Que legal!</button>
+            <button type="button" class="btn btn-secondary my-2 w-100" data-bs-dismiss="modal" onclick="verDepoisNovidades()">Ver depois</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff66b2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Calculadora Moranguinho">
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+<link rel="apple-touch-icon" href="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg">
+<meta name="apple-touch-startup-image" content="https://cdn.awsli.com.br/600x450/129/129579/produto/7267948/48721cb7d4.jpg">
+
+  
+<div class="container-box">
+  <h1 class="text-center mb-4">Calculadora da Moranguinho</h1>
+
+  <!-- Aviso geral -->
+  <div class="d-flex flex-row-reverse bd-highlight">
+  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ajudaModal">
+    Ajuda
+  </button>
+  </div>
+
+  <!-- Formulário para IBC -->
+  <div>
+    <h3>Média IBC</h3>
+    <form id="formIBC">
+      <div class="mb-3">
+        <label for="mediaIBC" class="form-label">Média IBC:</label>
+        <div class="input-group"> 
+          <input inputmode="decimal" type="number" class="form-control" id="mediaIBC" required>
+          <span class="i btn-clear">X</span>
+        </div>
+      </div>
+    </form>
+  </div>
+ 
+  <!-- Aviso para Morfologia -->
+
+  <!-- Formulário para Morfologia -->
+  <div>
+    <h3>Morfologia</h3>
+    <form id="formMorfologia">
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nota1Anatomia" class="form-label">Nota 1 de Anatomia:</label>
+            <div class="input-group">
+              <input inputmode="decimal" type="number" class="form-control" id="nota1Anatomia" required>
+              <span class="btn-clear">X</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nota1Histologia" class="form-label">Nota 1 de Histologia:</label>
+            <div class="input-group">
+              <input inputmode="decimal" type="number" class="form-control" id="nota1Histologia" required>
+              <span class="btn-clear">X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nota2Anatomia" class="form-label">Nota 2 de Anatomia:</label>
+            <div class="input-group">
+              <input inputmode="decimal" type="number" class="form-control" id="nota2Anatomia" required>
+              <span class="btn-clear">X</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nota2Histologia" class="form-label">Nota 2 de Histologia:</label>
+            <div class="input-group">
+              <input inputmode="decimal" type="number" class="form-control" id="nota2Histologia" required>
+              <span class="btn-clear">X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  
+
+  <!-- Aviso para Sessão Tutorial -->
+ 
+  <!-- Formulário para Sessão Tutorial -->
+<div>
+  <h3>Sessão Tutorial</h3>
+  <form id="formSessaoTutorial">
+    <div class="mb-3">
+      <label for="cognitiva1" class="form-label">Nota Cognitiva 1:</label>
+      <div class="input-group">
+        <input inputmode="decimal" type="number" class="form-control" id="cognitiva1" required>
+        <span class="btn-clear">X</span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="cognitiva2" class="form-label">Nota Cognitiva 2:</label>
+      <div class="input-group">
+        <input inputmode="decimal" type="number" class="form-control" id="cognitiva2" required>
+        <span class="btn-clear">X</span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="formativa" class="form-label">Nota Formativa:</label>
+      <div class="input-group">
+        <input inputmode="decimal" type="number" class="form-control" id="formativa" required>
+        <span class="btn-clear">X</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+  <!-- Botão para calcular nota final -->
+  <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" onclick="calcularNotaFinal()">Calcular Nota Final</button>
+  </div>
+  <!-- Exibição do resultado -->
+  <div class="mt-3">
+    <h5>Resultado:</h5>
+    <p id="resultado"></p>
+  </div>
+
+</div>
+
+<!-- Adicione o link para os scripts do Bootstrap e o seu script personalizado -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Carregar dados do localStorage ao carregar a página
+  window.onload = function () {
+    var notaFinalSalva = localStorage.getItem('notaFinal');
+    if (notaFinalSalva !== null) {
+      document.getElementById('resultado').innerHTML = `Nota Final da última sessão: ${notaFinalSalva}`;
+    }
+  };
+
+  function calcularNotaFinal() {
+    // Obter valores dos campos
+    var mediaIBC = parseFloat(document.getElementById('mediaIBC').value);
+    var nota1Anatomia = parseFloat(document.getElementById('nota1Anatomia').value);
+    var nota1Histologia = parseFloat(document.getElementById('nota1Histologia').value);
+    var nota2Anatomia = parseFloat(document.getElementById('nota2Anatomia').value);
+    var nota2Histologia = parseFloat(document.getElementById('nota2Histologia').value);
+    var cognitiva1 = parseFloat(document.getElementById('cognitiva1').value);
+    var cognitiva2 = parseFloat(document.getElementById('cognitiva2').value);
+    var formativa = parseFloat(document.getElementById('formativa').value);
+
+    // Calcular médias
+    var mediaMorfologia1 = (nota1Anatomia * 2/3) + (nota1Histologia * 1/3);
+    var mediaMorfologia2 = (nota2Anatomia * 2/3) + (nota2Histologia * 1/3);
+    var mediaMorfologia = (mediaMorfologia1 + mediaMorfologia2) / 2;
+    var mediaSessaoTutorial = (cognitiva1 + cognitiva2) / 2;
+
+    // Calcular nota final
+    var notaFinal = (mediaIBC * 0.2) + (mediaMorfologia * 0.3) + (mediaSessaoTutorial * 0.3) + (formativa * 0.2);
+
+    // Armazenar a nota final no localStorage
+    localStorage.setItem('notaFinal', notaFinal);
+
+    // Exibir resultado
+    var resultadoElement = document.getElementById('resultado');
+    resultadoElement.innerHTML = `Nota Final: ${notaFinal.toFixed(2)}<br>`;
+    
+    // Verificar se o usuário foi aprovado ou reprovado
+    if (notaFinal >= 6) {
+      resultadoElement.innerHTML += '<span style="color: green;">Aprovado! Parabéns amiguinha</span>';
+      alert("Parabéns amiguinha, você passou.");
+    } else {
+      resultadoElement.innerHTML += '<span style="color: red;">Reprovado!</span>';
+    }
+  }
+</script>
+<script src="/index/includes/guardadados.js"></script>
+
+
+
+
+
+<div class="modal fade" id="ajudaModal" tabindex="-1" aria-labelledby="ajudaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ajudaModalLabel">Como usar a calculadora</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class-"my-2">
+          <h3>Dica de amiguinha</h3>
+        </div>
+        <p>A calculadora usa a nota de cada avaliação de 0 a 10 ou a média de IBC. </p>
+        <p>Se você não tiver a nota da prova, pode calculá-la aqui:</p>
+
+        <div class-"my-2">
+          <h3>Cálculo da nota</h3>
+        </div>
+
+        <div class="mb-3">
+          <label for="acertos" class="form-label">Acertos:</label>
+          <input type="number" class="form-control" id="acertos">
+        </div>
+        <div class="mb-3">
+          <label for="questoes" class="form-label">Questões:</label>
+          <input type="number" class="form-control" id="questoes">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calcularNota()">Calcular Nota</button>
+        <p id="resultadoCalculo"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/index/includes/calculo.js"></script>
+
+
+
+
+
+</body>
+</html>
